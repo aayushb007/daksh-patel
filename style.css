@@ -1,0 +1,121 @@
+:root {
+    --primary: #008080; /* Professional Teal */
+    --dark: #1a1a1a;
+    --light: #f4f7f7;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container { width: 85%; max-width: 1100px; margin: 4rem auto; }
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 7.5%;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: bold; }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 2rem; }
+nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.9rem; }
+
+/* Split Hero Header */
+.hero {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    padding: 0 7.5%;
+}
+
+.hero-image {
+    flex: 1;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This crops the image to fill the space perfectly */
+}
+
+.badge {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+/* Experience Cards */
+.bg-light { background: var(--light); padding: 4rem 0; }
+
+.timeline-item {
+    background: var(--white);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.org {
+    display: block;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.skills-grid span {
+    display: inline-block;
+    background: #e0eeee;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--primary);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .hero { flex-direction: column; height: auto; }
+    .hero-image { height: 400px; width: 100%; order: -1; } /* Image on top for mobile */
+    header h1 { font-size: 2.5rem; }
+}
